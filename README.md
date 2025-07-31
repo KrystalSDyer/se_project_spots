@@ -3,19 +3,17 @@
 ### Overview
 
 - Intro
-- Figma
-- Images
+- Video
+- Upcoming Ideas
 
 **Intro**
 
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+This project is a web layout for viewing and liking images. The profile portion of this project includes an avatar, a description of the avatar, a new avatar button, and an edit button.
 
-**Figma**
+**Video**
 
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+- [Link to the video](https://drive.google.com/file/d/1trAAc_4zZTOd3wqeooRCdZFLhw_UWpKq/view?usp=sharing)
 
-**Images**
+**Upcoming Ideas**
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
-
-Good luck and have fun!
+I look forward to enhancing this document by adding additional pages and linking this page to a secured webpage with a password.
