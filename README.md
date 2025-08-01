@@ -14,6 +14,10 @@ This project is a web layout for viewing and liking images. The profile portion 
 
 - [Link to the video](https://drive.google.com/file/d/1trAAc_4zZTOd3wqeooRCdZFLhw_UWpKq/view?usp=sharing)
 
+**Deployment**
+
+- [Link to the deployment](https://krystalsdyer.github.io/se_project_spots/)
+
 **Upcoming Ideas**
 
 I look forward to enhancing this document by adding additional pages and linking this page to a secured webpage with a password.
