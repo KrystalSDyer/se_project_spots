@@ -10,11 +10,13 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  transition: visability 0.3s, opacity 0.3s;
+  transition: visibility 0.3s, opacity 0.3s;
+  opacity: 0;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -23,6 +25,7 @@
   border-radius: 8px;
   background-color: white;
   padding: 32px 50px;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -34,16 +37,19 @@
   height: 40px;
   padding: 0;
   border: none;
-  border-radius: 2px;
-  background-color: white;
+  background-color: transparent;
   cursor: pointer;
+  opacity: 0.4;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.4;
 }
 
 .modal__title {
   margin: 0 0 32px;
   font-weight: 500;
-  width: 169px;
-  font-weight: 500;
+  width: 100%;
   color: #212121;
 }
 
@@ -55,24 +61,23 @@
 .modal__label {
   margin: 0 0 32px;
   line-height: normal;
-  padding: 16px 12px;
   gap: 10px;
   color: #212121;
-  padding-bottom: 48px;
+  opacity: 70%;
   font-size: 16px;
+  margin-bottom: 16px;
 }
 
 .modal__input {
   display: block;
   margin: 8px 0 0;
   width: 100%;
+  box-sizing: border-box;
   line-height: normal;
   padding: 16px 12px;
   border-radius: 8px;
   font-weight: 500;
-  margin-bottom: 16px;
   font-size: 20px;
-  opacity: 70%;
 }
 
 .modal__input::placeholder {
@@ -87,20 +92,21 @@
   max-width: 156px;
   height: 52px;
   padding: 18px 32px;
-  margin: 32px 16px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
   .modal__form {
     gap: 24px;
+    display: flex;
   }
   .modal__title {
     font-size: 20px;
-    margin-bottom: 24px;
   }
 
   .modal__submit-btn {
     width: 100%;
     max-width: none;
+    justify-content: space-between;
   }
 }
