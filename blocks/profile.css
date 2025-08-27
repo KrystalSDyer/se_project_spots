@@ -119,6 +119,10 @@
     margin: 0 0 20px;
   }
 
+  .profile__new-post-btn {
+    margin: 0;
+  }
+
   .profile__add-btn {
     margin: 0;
     width: 100%;

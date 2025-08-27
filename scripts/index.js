@@ -22,11 +22,11 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editProfileModal.classList.add("modal_is-opened");
+  editProfileModal.classList.openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
+  editProfileModal.classList.closeModal(editProfileModal);
 });
 
 function openModal(modal) {
@@ -38,18 +38,18 @@ function closeModal(modal) {
 }
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  newPostModal.classList.openModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  newPostModal.classList.closeModal(newPostModal);
 });
 
 function handledEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
+  editProfileModal.classList.closeModal(editProfileModal);
 }
 
 editProfileForm.addEventListener("submit", handledEditProfileSubmit);
@@ -59,7 +59,7 @@ function handledNewPostSubmit(evt) {
   evt.preventDefault();
    console.log("Image URL:", nameInput.value);
   console.log("Caption:", linkInput.value);
-  newPostModal.classList.remove("modal_is-opened");
+  newPostModal.classList.closeModal(newPostModal);
 }
 
 newPostModal.addEventListener("submit", handledNewPostSubmit);
