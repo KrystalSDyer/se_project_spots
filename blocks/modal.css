@@ -59,7 +59,7 @@
 
 .modal__close-btn_type_preview:hover {
   cursor: pointer;
-opacity: 40%;
+opacity: 0.4;
 }
 
 .modal__close-btn:hover {

@@ -9,6 +9,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .card__content {
@@ -52,7 +53,7 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .card__like-btn_active {
@@ -62,7 +63,7 @@
 
 .card__like-btn:hover {
   cursor: pointer;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .card__like-btn_active:hover {

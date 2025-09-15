@@ -49,7 +49,7 @@ const linkInput = newPostModal.querySelector("#image-caption-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 const previewImageEl = previewModal.querySelector(".modal__image");
-const preveiwModalCaption = previewModal.querySelector(".modal__caption");
+const previewModalCaption = previewModal.querySelector(".modal__caption");
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
@@ -68,24 +68,23 @@ function getCardElement(data) {
   cardImgEl.alt = data.name;
   cardTitleEl.textContent = data.name;
 
-   const cardLikeBtnEl = cardElement.querySelector(".card__like-btn");
-   cardLikeBtnEl.addEventListener("click", () => {
+  const cardLikeBtnEl = cardElement.querySelector(".card__like-btn");
+  cardLikeBtnEl.addEventListener("click", () => {
     cardLikeBtnEl.classList.toggle("card__like-btn_active");
-   });
+  });
 
-   const cardDeletebtnEl = cardElement.querySelector(".card__delete-btn");
-   cardDeletebtnEl.addEventListener("click", () => {
+  const cardDeletebBtnEl = cardElement.querySelector(".card__delete-btn");
+  cardDeletebtnEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
-   });
+  });
 
-   cardImgEl.addEventListener("click", () => {
-  previewImageEl.src = data.link;
-  previewImageEl.alt = data.name;
-  preveiwModalCaption.textContent = data.name;
-  openModal(previewModal);
-   })
-closeModal(previewModal);
+  cardImgEl.addEventListener("click", () => {
+    previewImageEl.src = data.link;
+    previewImageEl.alt = data.name;
+    preveiwModalCaption.textContent = data.name;
+    openModal(previewModal);
+  });
+  closeModal(previewModal);
   return cardElement;
 }
 
@@ -128,13 +127,14 @@ function handledNewPostSubmit(evt) {
   evt.preventDefault();
 
   const inputValues = {
-    name: captionInputEl.value,
-    link: linkInputEl.value,
+    name: nameInput.value,
+    link: linkInput.value,
   };
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
+  newPostForm.reset();
   closeModal(newPostModal);
 }
 
