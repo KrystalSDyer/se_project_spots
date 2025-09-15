@@ -79,7 +79,7 @@ function getCardElement(data) {
     cardElement = null;
    });
 
-   cardImgEl.addEventListener.("click", () => {
+   cardImgEl.addEventListener("click", () => {
   previewImageEl.src = data.link;
   previewImageEl.alt = data.name;
   preveiwModalCaption.textContent = data.name;
