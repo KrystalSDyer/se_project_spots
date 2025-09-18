@@ -54,6 +54,8 @@ const previewModalCaption = previewModal.querySelector(".modal__caption");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+const newPostForm = newPostModal.querySelector(".modal__form");
+
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
@@ -135,7 +137,6 @@ function handledNewPostSubmit(evt) {
     link: linkInput.value,
   };
 
-  const newPostForm = newPostModal.querySelector(".modal__form");
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
