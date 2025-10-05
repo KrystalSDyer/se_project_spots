@@ -79,13 +79,14 @@
 }
 
 .modal__label {
+  display: block;
   margin: 0 0 32px;
   line-height: normal;
   gap: 10px;
   color: #212121;
   opacity: 70%;
   font-size: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .modal__input {
@@ -103,6 +104,21 @@
 
 .modal__input::placeholder {
   color: #2121214d;
+}
+
+.modal__input:hover {
+  border: 1px solid rgb(33,33,33);
+}
+
+.modal__input_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  color: #FF0000;
+  font-size: 18px;
 }
 
 .modal__submit-btn {
