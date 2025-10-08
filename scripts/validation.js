@@ -36,7 +36,7 @@ return inputList.some((input) => {
 }
 const toggleButtonState = (inputList, buttonEl) => {
   if (hasInvalidInput(inputList)) {
-    disableButton(buttonEl,);
+    disableButton(buttonEl);
   } else {
     buttonEl.disabled = false;
   }

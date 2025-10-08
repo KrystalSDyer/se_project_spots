@@ -121,7 +121,7 @@ previewModalCloseBtn.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
-function handledEditProfileSubmit(evt) {
+function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
@@ -130,7 +130,7 @@ function handledEditProfileSubmit(evt) {
 
 editProfileForm.addEventListener("submit", handledEditProfileSubmit);
 
-function handledNewPostSubmit(evt) {
+function handleNewPostSubmit(evt) {
   evt.preventDefault();
 
   const inputValues = {
