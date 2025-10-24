@@ -29,10 +29,35 @@ const initialCards = [
   },
 ];
 
-function handleEscapeKey(event) {
-  if (event.key === "Escape") {
+
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const activePopup = document.querySelector(".modal_is-opened");
+    closeModal(activePopup);
   }
 }
+
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+  document.addEventListener("keyup", handleEscape);
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keyup", handleEscape);
+}
+
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (
+      evt.target.classList.contains("modal")
+    ) {
+      closeModal(modal);
+    }
+  });
+});
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -103,11 +128,12 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
+
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
   openModal(editProfileModal);
-  resetValidation(editProfileForm, [profileNameEl, profileDescriptionEl], settings);
+  resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput], settings);
 });
 
 
@@ -136,6 +162,7 @@ function handleEditProfileSubmit(evt) {
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
+
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
 
@@ -157,3 +184,5 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+
